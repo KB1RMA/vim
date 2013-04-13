@@ -19,3 +19,18 @@
 [submodule "bundle/vim-css-color"]
 	path = bundle/vim-css-color
 	url = git@github.com:skammer/vim-css-color.git
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+	url = git@github.com:tpope/vim-repeat.git
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = git@github.com:tpope/vim-surround.git
+[submodule "bundle/php-folding"]
+	path = bundle/php-folding
+	url = git@github.com:vim-scripts/phpfolding.vim.git
+[submodule "bundle/jslint"]
+	path = bundle/jslint
+	url = git@github.com:hallettj/jslint.vim.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = git@github.com:scrooloose/syntastic.git
