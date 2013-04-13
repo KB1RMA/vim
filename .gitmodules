@@ -1,0 +1,18 @@
+[submodule "autoload/pathogen"]
+	path = autoload/pathogen
+	url = git://github.com/tpope/vim-pathogen.git
+[submodule "bundle/molokai"]
+	path = bundle/molokai
+	url = git@github.com:tomasr/molokai.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
+[submodule "bundle/hexHighlight"]
+	path = bundle/hexHighlight
+	url = git@github.com:yurifury/hexHighlight.git
+[submodule "bundle/vim-powerline"]
+	path = bundle/vim-powerline
+	url = git@github.com:Lokaltog/vim-powerline.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = git@github.com:kien/ctrlp.vim.git
