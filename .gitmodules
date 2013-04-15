@@ -4,9 +4,6 @@
 [submodule "bundle/molokai"]
 	path = bundle/molokai
 	url = git@github.com:tomasr/molokai.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = git@github.com:scrooloose/nerdtree.git
 [submodule "bundle/hexHighlight"]
 	path = bundle/hexHighlight
 	url = git@github.com:yurifury/hexHighlight.git
