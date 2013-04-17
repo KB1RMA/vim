@@ -33,6 +33,7 @@ set number
 colorscheme molokai
 
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType scss set omnifunc=csscomplete#CompleteCSS
 
 let g:Powerline_symbols = 'fancy'
 
