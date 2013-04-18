@@ -1,6 +1,8 @@
 " Make vim more useful
 set nocompatible
 
+" No newline at EOF for php
+autocmd FileType php setlocal noeol binary fileformat=dos
 
 " Enabled later, after Pathogen
 filetype off
