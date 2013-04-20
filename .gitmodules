@@ -40,3 +40,6 @@
 [submodule "bundle/closetag.vim"]
 	path = bundle/closetag.vim
 	url = git@github.com:docunext/closetag.vim.git
+[submodule "bundle/vim-bad-whitespace"]
+	path = bundle/vim-bad-whitespace
+	url = git@github.com:bitc/vim-bad-whitespace.git

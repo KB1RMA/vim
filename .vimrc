@@ -19,14 +19,13 @@ if has("gui_running")
 	if has("gui_gtk2")
 		set guifont=Consolas\ 9
 	else
-		set guifont=Consolas\ for\ Powerline\ FixedD:h9
+syntax		set guifont=Consolas\ for\ Powerline\ FixedD:h9
 	endif
-endif		
+endif
 
 set shiftwidth=2
 set tabstop=2
 " set termencoding=utf-8
-
 
 set guioptions-=m  "remove menu
 set guioptions-=T  "remove toolbar
@@ -37,7 +36,7 @@ set spell
 set hlsearch
 set number
 
-" Settings from Paul Irish 
+" Settings from Paul Irish
 set visualbell " Use visual bell instead of audible bell (annnnnoying)
 set title " Show the filename in the window titlebar.
 set ttyfast " Send more characters at a given time.
@@ -54,7 +53,7 @@ set foldcolumn=4 " Column to show folds
 set foldenable
 set foldlevel=2
 " set foldlevelstart=2 " Sets `foldlevel` when editing a new buffer
-set foldmethod=syntax " Markers are used to specify folds.
+set foldmethod=indent " Markers are used to specify folds.
 set foldminlines=0 " Allow folding single lines
 set foldnestmax=3 " Set max fold nesting level
 set formatoptions=
@@ -73,9 +72,6 @@ set wildmode=list:longest " Complete only until point of ambiguity.
 autocmd FileType css scss set omnifunc=csscomplete#CompleteCSS
 
 " Status Line
-" hi User1 guibg=#455354 guifg=fg      ctermbg=238 ctermfg=fg  gui=bold,underline cterm=bold,underline term=bold,underline
-" hi User2 guibg=#455354 guifg=#CC4329 ctermbg=238 ctermfg=196 gui=bold           cterm=bold           term=bold
-" set statusline=[%n]\ %1*%<%.99t%*\ %2*%h%w%m%r%*%y[%{&ff}→%{strlen(&fenc)?&fenc:'No\ Encoding'}]%=%-16(\ L%l,C%c\ %)%P
 let g:Powerline_symbols = 'fancy'
 
 " Speed up viewport scrolling
@@ -110,6 +106,9 @@ nnoremap <silent> <space> :exe 'silent! normal! '.((foldclosed('.')>0)? 'zMzx' :
 " Emulate bundles, allow plugins to live independantly. Easier to manage.
 call pathogen#incubate()
 filetype plugin indent on
+
+" Strip trailing whitespace on save
+autocmd FileType c,cpp,java,php,javascript,ruby,python autocmd BufWritePre <buffer> :call StripWhitespace ()
 
 colorscheme molokai
 syntax on
