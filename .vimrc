@@ -110,6 +110,10 @@ filetype plugin indent on
 " Strip trailing whitespace on save
 autocmd FileType c,cpp,java,php,javascript,ruby,python autocmd BufWritePre <buffer> :call StripWhitespace ()
 
+" Use two spaces for these filetypes
+autocmd FileType python,ruby setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType javascript setlocal expandtab shiftwidth=4 softtabstop=4
+
 colorscheme molokai
 syntax on
 
