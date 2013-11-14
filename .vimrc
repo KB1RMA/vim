@@ -18,6 +18,8 @@ set encoding=utf-8 nobomb
 if has("gui_running")
 	if has("gui_gtk2")
 		set guifont=Consolas\ 9
+	elseif has("gui_macvim")
+		set guifont=Consolas:h9
 	else
 syntax		set guifont=Consolas\ for\ Powerline\ FixedD:h9
 	endif
@@ -50,7 +52,7 @@ set encoding=utf-8 nobomb " BOM often causes trouble
 set hidden " When a buffer is brought to foreground, remember undo history and marks.
 set history=1000 " Increase history from 20 default to 1000
 set foldcolumn=4 " Column to show folds
-set foldenable
+" set foldenable
 set foldlevel=2
 " set foldlevelstart=2 " Sets `foldlevel` when editing a new buffer
 set foldmethod=indent " Markers are used to specify folds.
