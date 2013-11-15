@@ -38,6 +38,14 @@ set spell
 set hlsearch
 set number
 
+" Swap files in tmp
+set backup
+if has("win32") || has("win64")
+   set directory=$TMP
+else
+   set directory=/tmp
+end
+
 " Settings from Paul Irish
 set visualbell " Use visual bell instead of audible bell (annnnnoying)
 set title " Show the filename in the window titlebar.
@@ -129,5 +137,3 @@ au BufRead,BufNewFile Rakefile,Capfile,Gemfile,.autotest,.irbrc,*.treetop,*.tt s
 
 map <F2> :mksession! ~/vim_session <cr> " Quick write session with F2
 map <F3> :source ~/vim_session <cr>     " And load session with F3
-
-set directory=.,$TEMP
