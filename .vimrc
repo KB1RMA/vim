@@ -42,8 +42,10 @@ set number
 set backup
 if has("win32") || has("win64")
    set directory=$TMP
+   set backupdir=$TMP
 else
    set directory=/tmp
+   set backupdir=/tmp
 end
 
 " Settings from Paul Irish
