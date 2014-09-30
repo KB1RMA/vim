@@ -21,7 +21,7 @@ if has("gui_running")
 	elseif has("gui_macvim")
 		set guifont=Consolas:h9
 	else
-syntax		set guifont=Consolas\ for\ Powerline\ FixedD:h9
+syntax set guifont=Consolas\ for\ Powerline\ FixedD:h9
 	endif
 endif
 
@@ -80,9 +80,6 @@ set formatoptions+=1 " Break before 1-letter words
 set wildmenu " Hitting TAB in command mode will show possible completions above command line.
 set wildmode=list:longest " Complete only until point of ambiguity.
 
-" CSS Color highlighting
-autocmd FileType css scss set omnifunc=csscomplete#CompleteCSS
-
 " Status Line
 let g:Powerline_symbols = 'fancy'
 
@@ -119,6 +116,10 @@ nnoremap <silent> <space> :exe 'silent! normal! '.((foldclosed('.')>0)? 'zMzx' :
 call pathogen#incubate()
 filetype plugin indent on
 
+" CSS Color highlighting
+" autocmd FileType css scss set omnifunc=csscomplete#CompleteCSS
+let g:cssColorVimDoNotMessMyUpdatetime = 1
+
 " Strip trailing whitespace on save
 autocmd FileType c,cpp,java,php,javascript,ruby,python autocmd BufWritePre <buffer> :call StripWhitespace ()
 
@@ -139,3 +140,9 @@ au BufRead,BufNewFile Rakefile,Capfile,Gemfile,.autotest,.irbrc,*.treetop,*.tt s
 
 map <F2> :mksession! ~/vim_session <cr> " Quick write session with F2
 map <F3> :source ~/vim_session <cr>     " And load session with F3
+
+" Automatically watch for changes in .vimrc and reload
+augroup myvimrc
+	au!
+	au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
