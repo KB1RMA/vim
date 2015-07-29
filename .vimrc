@@ -113,7 +113,7 @@ noremap <leader>ss :call StripWhitespace ()<CR>
 nnoremap <silent> <space> :exe 'silent! normal! '.((foldclosed('.')>0)? 'zMzx' : 'zc')<CR>
 
 " Emulate bundles, allow plugins to live independantly. Easier to manage.
-call pathogen#incubate()
+execute pathogen#infect()
 filetype plugin indent on
 
 " CSS Color highlighting
