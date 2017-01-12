@@ -2,6 +2,35 @@
 set nocompatible
 filetype off
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" let Vundle manage Vundle, required
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tomasr/molokai'
+Plugin 'yurifury/hexHighlight'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'skammer/vim-css-color'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'hallettj/jslint.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'gregsexton/MatchTag'
+Plugin 'docunext/closetag.vim'
+Plugin 'bitc/vim-bad-whitespace'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'Valloric/YouCompleteMe'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 " No newline at EOF for php
 autocmd FileType php setlocal noeol binary fileformat=dos
 
@@ -140,3 +169,4 @@ augroup myvimrc
 	au!
 	au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
+
