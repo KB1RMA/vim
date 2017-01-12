@@ -61,3 +61,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/vundle"]
+	path = bundle/vundle
+	url = http://github.com/gmarik/vundle.git
