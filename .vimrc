@@ -112,10 +112,6 @@ noremap <leader>ss :call StripWhitespace ()<CR>
 " Toggle folds (<Space>)
 nnoremap <silent> <space> :exe 'silent! normal! '.((foldclosed('.')>0)? 'zMzx' : 'zc')<CR>
 
-" Emulate bundles, allow plugins to live independantly. Easier to manage.
-execute pathogen#infect()
-filetype plugin indent on
-
 " CSS Color highlighting
 " autocmd FileType css scss set omnifunc=csscomplete#CompleteCSS
 let g:cssColorVimDoNotMessMyUpdatetime = 1
