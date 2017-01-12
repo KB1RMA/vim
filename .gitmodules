@@ -1,6 +1,3 @@
-[submodule "autoload/pathogen"]
-	path = autoload/pathogen
-	url = git://github.com/tpope/vim-pathogen.git
 [submodule "bundle/molokai"]
 	path = bundle/molokai
 	url = git@github.com:tomasr/molokai.git

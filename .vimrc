@@ -1,11 +1,9 @@
 " Make vim more useful
 set nocompatible
+filetype off
 
 " No newline at EOF for php
 autocmd FileType php setlocal noeol binary fileformat=dos
-
-" Enabled later, after Pathogen
-filetype off
 
 " Change mapleader
 let mapleader=","
